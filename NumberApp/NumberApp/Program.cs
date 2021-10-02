@@ -10,39 +10,39 @@ namespace Number.App
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
+            Random rand = new Random();
+
             int answer;
+            int number = rand.Next(10, 20);
+
             Console.WriteLine("Hi! It's NumberApp!");
-            int number = r.Next(10, 20);
 
             {
                 Console.WriteLine("Please input any number: ");
                 answer = Convert.ToInt32(Console.ReadLine());
+
                 if (answer < number)
 
-                {
+                  {
                     Console.WriteLine("You are wrong! Your number is less!");
-                }
+                  }
 
-                {
-                    if (answer > number)
+                if (answer > number)
 
-                    {
-                        Console.WriteLine("You are wrong! Your number is grater!");
-                    }
-
-                    {
-                        if (answer == number)
-
-                        {
-                            Console.WriteLine("Correct! This is #.");
+                  {
+                    Console.WriteLine("You are wrong! Your number is grater!");
+                  }
+                
+                   
+                if (answer == number)
+                   
+                  {
+                    Console.WriteLine("Correct! This is: ", number);
                            
-                        }
-
+                  }
+                     
                     }
 
                 }
             }
-        }
-    }
 }
