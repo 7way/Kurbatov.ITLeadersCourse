@@ -6,7 +6,13 @@ namespace ConsoleApp.CSharpBasic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int intVar = 1;
+            int intVar2 = 2;
+            Console.WriteLine(intVar);
         }
-    }
+
+
+
+
+}
 }
