@@ -21,7 +21,7 @@ namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
         }
         else
         {
-            Console.WriteLine(output);
+            Console.WriteLine(Output);
         }
     }
 }
