@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ConsoleApp.CSharpBasic.IO.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.CSharpBasic.IO.Implementatitons
+namespace ConsoleApp.CSharpBasic.IO.Implementations
     public class InputFactory : IInputFactory
 {
 

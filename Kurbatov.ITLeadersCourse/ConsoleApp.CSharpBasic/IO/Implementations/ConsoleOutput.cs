@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
+namespace ConsoleApp.CSharpBasic.IO.Inplementations
 {
     public class ConsoleOutput : IOutput
     {

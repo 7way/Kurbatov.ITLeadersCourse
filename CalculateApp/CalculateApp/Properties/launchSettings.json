@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CalculateApp": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\user\\Desktop\\ITLeadersCourse\\Kurbatov.ITLeadersCourse\\CalculateApp"
+    }
+  }
+}
