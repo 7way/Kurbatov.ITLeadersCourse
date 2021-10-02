@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
 {
-    class ConsoleOutput : IOutput
+    public class ConsoleOutput : IOutput
     {
         public void Write(object output = null)
         {
@@ -17,11 +17,13 @@ namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
         public void WriteLine(object output = null)
         {
             if (output == null)
+            {
                 Console.WriteLine();
-        }
-        else
-        {
-            Console.WriteLine(Output);
+            }
+            else
+            {
+                Console.WriteLine(output);
+            }
         }
     }
 }

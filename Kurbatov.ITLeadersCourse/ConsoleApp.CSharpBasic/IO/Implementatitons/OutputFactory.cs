@@ -9,17 +9,17 @@ namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
 {
     public class OutputFactory : IOutputFactory
     {
-        public override bool GetOutputInstance(Type outputType)
+        public class OutputFactory : IOutputFactory
         {
-           switch (outputType)
+            public override IOutput GetOutputInstance(Type outputType)
             {
-                case Type when outputType Type == typeof(ConsoleOutput);
-                    return new ConsoleOutput();
-                        default:
-                    throw new NotImplementedException();
+                switch (outputType)
+                {
+                    case Type when outputType == typeof(ConsoleOutput):
+                        return new ConsoleOutput();
+                    default:
+                        throw new NotImplementedException();
+                }
             }
         }
-
-       
     }
-}

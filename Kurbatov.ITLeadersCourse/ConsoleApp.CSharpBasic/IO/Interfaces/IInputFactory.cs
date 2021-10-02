@@ -5,11 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp.CSharpBasic.IO.Interfaces
+    public abstract class IInputFactory
 {
-    public interface IOutput
-    {
-        void Write(object output = null);
-
-        void WriteLine(object output = null);
-    }
+    public abstract IInput GetInputInstance(Type outpuType);
+}
 }
