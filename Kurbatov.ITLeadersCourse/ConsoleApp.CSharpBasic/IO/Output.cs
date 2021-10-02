@@ -1,4 +1,5 @@
 ﻿using ConsoleApp.CSharpBasic.IO.Interfaces;
+using ConsoleApp.CSharpBasics.IO.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,13 @@ namespace ConsoleApp.CSharpBasic.IO
         {
             get
             {
-                if(output == null)
+                if (output == null)
                 {
-                    output = new IOutputFactory().GetOutputInstance(typeof(ConsoleOutput));
+                    output = new OutputFactory().GetOutputInstance(typeof(ConsoleOutput));
                 }
 
                 return output;
             }
         }
-
     }
 }

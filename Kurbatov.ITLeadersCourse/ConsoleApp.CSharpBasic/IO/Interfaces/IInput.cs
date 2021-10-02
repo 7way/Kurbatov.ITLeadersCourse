@@ -5,11 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp.CSharpBasic.IO.Interfaces
+    public interface IInput
 {
-    public interface IOutput
-    {
-        void Write(object output = null);
-
-        void WriteLine(object output = null);
-    }
+    string ReadLine();
+}
 }
