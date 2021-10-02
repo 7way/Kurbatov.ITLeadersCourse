@@ -16,7 +16,12 @@ namespace ConsoleApp.CSharpBasic.IO.Inplementatitons
 
         public void WriteLine(object output = null)
         {
-            throw new NotImplementedException();
+            if (output == null)
+                Console.WriteLine();
+        }
+        else
+        {
+            Console.WriteLine(Output);
         }
     }
 }
