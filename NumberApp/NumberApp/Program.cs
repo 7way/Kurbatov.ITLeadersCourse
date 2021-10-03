@@ -27,7 +27,7 @@ namespace Number.App
                     Console.WriteLine("You are wrong! Your number is less!");
                   }
 
-                if (answer > number)
+                else if (answer > number)
 
                   {
                     Console.WriteLine("You are wrong! Your number is grater!");
