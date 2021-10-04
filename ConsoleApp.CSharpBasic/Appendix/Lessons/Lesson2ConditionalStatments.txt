@@ -140,7 +140,47 @@
                 default:
                     Out.WriteLine("Number is out of range.");
                     break;
+
+
+              
             }
+
+            //NumberApp
+            Out.WriteLine("Try to guess a number between two numbers")
+
+            int guessNumber;
+            const int numberToBeGuessed = 15;
+            const int minimumBorder = 10;
+            const int maximumBorder = 20;
+
+            Out.Write("Input an integer: ");
+            guessNumber = int.Parse(In.Readline());
+
+            switch (guessNumber)
+            {
+            case numberToBeGuessed:
+                     Out.WriteLine($"You are right! This is {numberToBe Guessed}");
+                     break;
+                     default:
+                     switch (guessNumber)
+                     {
+                     case < minimumBorder:
+                     case > maximumBorder:
+                            Out.WriteLine)("You number is ot of range!");
+                            break;
+                            case > numberToBeGuessed:
+                            Out.WriteLine("You are wrong! Your number is grater!");
+                            break;
+
+                     case < numberToBeGuessed:
+                     Out.WriteLine("You are wrong! Your number is less!");
+                     break;
+                     default:
+                     break;
+
+                     }
+            }
+
         }
     }
 }
