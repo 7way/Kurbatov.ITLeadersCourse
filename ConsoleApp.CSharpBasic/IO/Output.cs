@@ -1,13 +1,8 @@
-﻿using ConsoleApp.CSharpBasic.IO.Interfaces;
-using ConsoleApp.CSharpBasics.IO.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp.CSharpBasic.IO
+﻿namespace ConsoleApp.CSharpBasics.IO
 {
+    using ConsoleApp.CSharpBasics.IO.Implementations;
+    using ConsoleApp.CSharpBasics.IO.Interfaces;
+
     public class Output
     {
         private static IOutput output;
