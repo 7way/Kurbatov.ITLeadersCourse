@@ -31,3 +31,34 @@
    *****
 
 Link to Lesson 3 video: https://drive.google.com/file/d/1ogJVMp3YIRO6qb0Zt4aeTf1mtD3e2xrz/view?usp=sharing
+
+
+
+ // HomeTask1
+
+ namespace ConsoleApp.CSharpBasics
+{
+    using System;
+    using static ConsoleApp.CSharpBasics.IO.Output;
+
+    class Program
+    {
+        static void Main(string[] args)
+
+            int[] integersArray = { 1, 2, 3, 4, 5 };
+            Console.WriteLine("Out massive");
+
+            for (int i= integerArray.Lenght - 1; i >= 0; --i)
+            {
+            Console.WriteLine(integerArray[i]);
+            }
+
+            {
+            Console.ReadLine();
+            }
+
+        }
+        }
+
+
+            
