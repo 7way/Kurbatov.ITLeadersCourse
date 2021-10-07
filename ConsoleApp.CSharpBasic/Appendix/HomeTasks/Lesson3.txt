@@ -38,23 +38,33 @@ Link to Lesson 3 video: https://drive.google.com/file/d/1ogJVMp3YIRO6qb0Zt4aeTf1
 
 namespace ConsoleApp.CSharpBasics
 {
-    using System;
     using static ConsoleApp.CSharpBasics.IO.Output;
 
-    class Program { }
-    
-        static void Main(string[] args)
+    class Program
     {
 
-        int[] integerArray = { 1, 2, 3, 4, 5 }; //инициализируем масссив
-
-        int[] integerArray = new int[5]; // выделяем память массиву]
-
-         for (int i = integerArray.Length - 1; i>=0; i--) //условие 
-
+        static void Main(string[] args)
         {
-            Out.WriteLine(integerArray[i]); //вывод элементов массива
+
+            int[] integerArray = { 1, 2, 3, 4, 5 }; //инициализируем масссив
+
+            int[] integerArray2 = new int[integerArray.Length]; // выделяем память массиву
+
+
+            for (int i = integerArray.Length - 1; i >= 0; i--) //условие 
+
+            {
+                integerArray2[integerArray.Length - i - 1] = integerArray[i];
+            }
+            for (int i = 0; i < integerArray.Length; i++)
+            {
+                integerArray2[integerArray.Length - i - 1] = integerArray[i];
+            }
+            for (int i = 0; i < integerArray2.Length; i++)
+            {
+                Out.Write(integerArray2[i] + " ");
+            }
+
         }
-           
     }
 }
