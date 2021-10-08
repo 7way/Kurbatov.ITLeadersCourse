@@ -68,3 +68,56 @@ namespace ConsoleApp.CSharpBasics
         }
     }
 }
+
+
+// HomeTask3
+
+namespace ConsoleApp.CSharpBasics
+{
+
+    using static ConsoleApp.CSharpBasics.IO.Input;
+    using static ConsoleApp.CSharpBasics.IO.Output;
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            // do-while loop
+
+            string login = string.Empty;
+            string password = string.Empty;
+            const string userLogin = "user";
+            const string userPassword = "12345";
+            bool isLoginSuccess = false;
+
+            Out.WriteLine("Program: Input your login and password. For exit Press Q");
+
+
+
+            do
+            {
+                Out.Write("Input your login, please: ");
+                login = In.ReadLine();
+
+                Out.Write("Input your password, please: ");
+                password = In.ReadLine();
+
+                if (login == userLogin && password == userPassword)
+                {
+                    Out.WriteLine("You are logged in.");
+                    isLoginSuccess = true;
+                }
+
+                else
+                {
+                    if (login == "Q" || password == "Q")
+                    {
+                        Out.WriteLine("Password or login are wrong. Input them once more please.");
+                        break;
+                    }
+                }
+            } while (!isLoginSuccess);
+        }
+    }
+}
