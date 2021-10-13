@@ -1,4 +1,106 @@
-﻿namespace ConsoleApp.CSharpBasics
+﻿using static ConsoleApp.CSharpBasics.IO.Output;
+
+namespace ConsoleApp.CSharpBasics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // user, 12345
+            // sds, 12345
+            // user, 5453
+            // "", ""
+            //"", 12345
+
+            string[] testLogins =
+            {
+                "user",
+                "sds",
+                "Q",
+                "user"
+            };
+
+            string[] testPasswords =
+            {
+                "12345",
+                "3243",
+                "12345",
+                "Q"
+            };
+
+             string[] expectedMessages =
+            {
+             "You are logged in successfully.",
+             "Password or login are wrong. Input them once more please.",
+             "Good bye!",
+             "Good bye!"
+            };
+
+            for (int i = 0; i < testLogins.Length; i++)
+            {
+                string actualMessage = TestUserLogin(testLogins[i], testPasswords[i]);
+                PrintTestResults(testLogins[i], testPasswords[i], actualMessage, expectedMessages[i]);
+            }
+        }
+
+        public static string TestUserLogin(string testLogin, string testPassword)
+        {
+            const string userLogin = "user";
+            const string userPassword = "12345";
+            const string quitMarker = "Q";
+
+
+            bool isLogInSuccess = false;
+
+            do
+            {
+                if (testLogin == userLogin && testPassword == userPassword)
+                {
+                    isLogInSuccess = true;
+                    return "You are logged in successfully.";
+
+                }
+                else
+                {
+                    if (testLogin == quitMarker || testPassword == quitMarker)
+                    {
+                        return "Good bye!";
+                    }
+                    else
+                    {
+                        return "Password or login are wrong. Input them once more please.";
+                    }
+                }
+            } while (!isLogInSuccess);
+        }
+
+        public static void PrintTestResults(string testLogin, string testPassword, string actualMessage, string expectedMessage)
+        {
+            if (actualMessage == expectedMessage)
+            {
+                Out.WriteLine($"Test login: {testLogin}; testPassword: {testPassword} Test: PASSED");
+                Out.WriteLine($"Expected message: {expectedMessage}");
+                Out.WriteLine($"Actual message: {actualMessage}");
+            }
+            else
+            {
+                Out.WriteLine($"Test login: {testLogin}; testPassword: {testPassword} Test: FAILED");
+                Out.WriteLine($"Expected message: {expectedMessage}");
+                Out.WriteLine($"Actual message: {actualMessage}");
+
+
+            }
+        }
+    }
+
+
+}
+
+//----------------------
+
+
+
+namespace ConsoleApp.CSharpBasics
 {
     using static ConsoleApp.CSharpBasics.IO.Output;
 
