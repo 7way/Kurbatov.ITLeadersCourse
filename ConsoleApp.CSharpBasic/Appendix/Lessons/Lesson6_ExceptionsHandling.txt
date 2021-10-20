@@ -1,7 +1,7 @@
 ﻿namespace ConsoleApp.CSharpBasics
 {
-    using System;
     using static ConsoleApp.CSharpBasics.IO.Output;
+    using System;
 
     class Program
     {
@@ -71,11 +71,11 @@
             {
                 Out.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
             }
-            catch (IndexOutOfRangeException ex)
+            catch(IndexOutOfRangeException ex)
             {
                 Out.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
             }
